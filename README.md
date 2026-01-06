@@ -150,18 +150,6 @@ jobs:
           sarif_file: results.sarif
 ```
 
-#### GitLab CI
-
-```yaml
-security-scan:
-  image: secscanner/secscanner:latest
-  script:
-    - secscanner scan . --format json --output gl-sast-report.json
-  artifacts:
-    reports:
-      sast: gl-sast-report.json
-```
-
 ### Configuration File
 
 Create `.secscanner.yaml` in your project root:
