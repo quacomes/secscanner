@@ -78,38 +78,6 @@ secscanner scan .
 - **Memory Efficient** - Stream processing for large codebases
 - **Fast Startup** - Single binary, no runtime dependencies
 
-## 📦 Installation
-
-### Binary (Recommended)
-
-```bash
-# macOS/Linux
-curl -sSL https://github.com/quacomes/secscanner/releases/latest/download/install.sh | bash
-
-# Windows (PowerShell)
-iwr -useb https://github.com/quacomes/secscanner/releases/latest/download/install.ps1 | iex
-```
-
-### Go Install
-
-```bash
-go install github.com/quacomes/secscanner/cmd@latest
-```
-
-### From Source
-
-```bash
-git clone https://github.com/quacomes/secscanner.git
-cd secscanner
-go build -o secscanner ./cmd
-```
-
-### Docker
-
-```bash
-docker run --rm -v $(pwd):/scan secscanner/secscanner scan /scan
-```
-
 ## 🎯 Quick Start
 
 ### Basic Scan
