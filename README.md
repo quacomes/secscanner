@@ -6,7 +6,7 @@
 
 [![Go Version](https://img.shields.io/badge/Go-1.23+-00ADD8?style=flat&logo=go)](https://golang.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat)](LICENSE)
-[![CI](https://img.shields.io/badge/CI-Passing-success?style=flat&logo=github-actions)](https://github.com/security-cli/secscanner/actions)
+[![CI](https://img.shields.io/badge/CI-Passing-success?style=flat&logo=github-actions)](https://github.com/quacomes/secscanner/actions)
 [![SARIF](https://img.shields.io/badge/Output-SARIF_2.1-purple?style=flat)](https://sarifweb.azurewebsites.net/)
 
 **Cloud-Native Security Scanner for Modern DevOps**
@@ -67,7 +67,7 @@ secscanner scan .
 - **Kubernetes Manifests** - Privileged containers, host access, missing limits
 - **Infrastructure as Code** ready for Terraform and Helm (coming soon)
 
-### 📊 Output Formats
+### 📊 Output Formats  
 - **Table (TUI)** - Beautiful terminal output with colors and progress bars
 - **JSON** - Machine-readable for custom integrations
 - **SARIF** - Native GitHub Code Scanning integration
@@ -84,22 +84,22 @@ secscanner scan .
 
 ```bash
 # macOS/Linux
-curl -sSL https://github.com/security-cli/secscanner/releases/latest/download/install.sh | bash
+curl -sSL https://github.com/quacomes/secscanner/releases/latest/download/install.sh | bash
 
 # Windows (PowerShell)
-iwr -useb https://github.com/security-cli/secscanner/releases/latest/download/install.ps1 | iex
+iwr -useb https://github.com/quacomes/secscanner/releases/latest/download/install.ps1 | iex
 ```
 
 ### Go Install
 
 ```bash
-go install github.com/security-cli/secscanner/cmd@latest
+go install github.com/quacomes/secscanner/cmd@latest
 ```
 
 ### From Source
 
 ```bash
-git clone https://github.com/security-cli/secscanner.git
+git clone https://github.com/quacomes/secscanner.git
 cd secscanner
 go build -o secscanner ./cmd
 ```
@@ -141,7 +141,7 @@ jobs:
       
       - name: Run SecScanner
         run: |
-          curl -sSL https://github.com/security-cli/secscanner/releases/latest/download/install.sh | bash
+          curl -sSL https://github.com/quacomes/secscanner/releases/latest/download/install.sh | bash
           secscanner scan . --format sarif --output results.sarif --fail-on high
       
       - name: Upload SARIF
